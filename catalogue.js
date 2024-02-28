@@ -17,7 +17,7 @@ db.products.insertMany([
 ]);
 
 // full text index for searching
-db.products.createIndex(
+db.products.createIndex({
     name: "text",
     description: "text"
 });
