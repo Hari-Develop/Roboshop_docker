@@ -16,6 +16,17 @@ services:
     image: catalogue:1.0.0
     depends_on:
       - mongodb
-
+  redis:
+    image: redis
+  user:
+    image: user:1.0.0
+    depends_on:
+      - mongodb
+      - redis
+  cart:
+    image: cart:1.0.0
+    depends_on:
+      - redis
+      - catalogue
 
   
