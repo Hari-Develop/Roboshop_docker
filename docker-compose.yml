@@ -38,5 +38,10 @@ services:
     image: shipping:1.0.0
     depends_on:
       - mysql
+  rabbitmq:
+    image: rabbitmq
+    environment:
+      - RABBITMQ_DEFAULT_USER=Roboshop
+      - RABBITMQ_DEFAULT_PASS=Roboshop123
 
   
