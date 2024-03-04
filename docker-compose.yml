@@ -31,5 +31,9 @@ services:
     depends_on:
       - redis
       - catalogue
+  shipping:
+    image: shipping:1.0.0
+    depends_on:
+      - mysql
 
   

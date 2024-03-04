@@ -1,4 +1,4 @@
-FROM mysql:5.3
+FROM mysql:5.7
 ENV MYSQL_ROOT_PASSWORD=Roboshop@123 \
     MYSQL_DATABASE=cities \
     MYSQL_USER=shipping \
