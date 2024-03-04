@@ -19,6 +19,9 @@ services:
 
   redis:
     image: redis
+  
+  mysql:
+    image: mysql:1.0.0
 
   user:
     image: user:1.0.0
