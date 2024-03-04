@@ -8,6 +8,10 @@ services:
       - "80:80"
     depends_on:
       - catalogue
+      - user
+      - cart
+      - shipping
+      - payment
 
   mongodb:
     image: mongodb:1.0.0
@@ -38,10 +42,15 @@ services:
     image: shipping:1.0.0
     depends_on:
       - mysql
+
   rabbitmq:
     image: rabbitmq
     environment:
       - RABBITMQ_DEFAULT_USER=Roboshop
       - RABBITMQ_DEFAULT_PASS=Roboshop123
+  payment:
+    image: payment
+    depends_on:
+      - rabbitmq
 
   
